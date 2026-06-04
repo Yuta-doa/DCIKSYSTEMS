@@ -8,34 +8,35 @@
 body {
     font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fcfcfc;
+    color: #2b303a;
+    background-color: #f8f9fa;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
-    color: #111;
+    color: #1a252f;
+    letter-spacing: 1px;
 }
 
 hr {
-    width: 60px;
-    height: 3px;
-    background-color: #0056b3;
+    width: 40px;
+    height: 4px;
+    background-color: #2c3e50;
     border: none;
-    margin: 20px auto 40px auto;
+    margin: 15px auto 35px auto;
 }
 
 /* ヘッダー */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.05);
     position: fixed;
     width: 100%;
     top: 0;
@@ -47,13 +48,13 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #0056b3;
+    color: #2c3e50;
     letter-spacing: 1px;
 }
 
@@ -63,151 +64,173 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #555;
+    color: #616e7d;
+    font-size: 0.95rem;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.2s;
 }
 
 nav ul li a:hover {
-    color: #0056b3;
+    color: #2c3e50;
 }
 
 /* メインビジュアル */
 .hero {
-    height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    height: 70vh;
+    background: linear-gradient(135deg, #1f2d3d, #34495e);
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
-    padding-top: 80px; /* ヘッダー分の余白 */
+    padding-top: 60px;
 }
 
 .hero-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #fff;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.85;
+    line-height: 1.8;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #0056b3;
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #004085;
-}
-
-/* 企業概要 */
-.about-section {
+/* 役割・方針 */
+.mission-section {
     padding: 80px 0;
+    background-color: #ffffff;
     text-align: center;
 }
 
-.about-section p {
-    max-width: 800px;
+.mission-section p {
+    max-width: 750px;
     margin: 0 auto;
-    font-size: 1.1rem;
-    color: #666;
+    font-size: 1.05rem;
+    color: #52606d;
+    text-align: left;
+    /* 中央揃えにしたい場合は text-align: center; に変更してください */
 }
 
-/* サービス */
-.services-section {
+/* 提供ソリューション */
+.solutions-section {
     padding: 80px 0;
-    background-color: #f4f7f6;
 }
 
-.service-grid {
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-.service-card {
-    background-color: #fff;
-    padding: 40px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    text-align: center;
-    transition: transform 0.3s;
+.card {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 6px;
+    border-top: 4px solid #34495e;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-card h3 {
+.card h3 {
     margin-bottom: 15px;
-    color: #0056b3;
+    color: #2c3e50;
+    font-size: 1.2rem;
 }
 
-.service-card p {
-    color: #666;
+.card p {
+    color: #616e7d;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* グループ専用サポート */
+.support-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.support-section > .container > p {
+    color: #616e7d;
     font-size: 0.95rem;
 }
 
-/* お問い合わせ */
-.contact-section {
-    padding: 80px 0;
-    text-align: center;
-}
-
 .contact-form {
-    max-width: 600px;
-    margin: 40px auto 0 auto;
+    max-width: 550px;
+    margin: 35px auto 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #34495e;
+    background-color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #34495e;
+    color: #fff;
+    padding: 14px;
+    border-radius: 4px;
+    font-weight: bold;
     font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #2c3e50;
 }
 
 /* フッター */
 footer {
-    background-color: #111;
-    color: #fff;
+    background-color: #1f2d3d;
+    color: #9aa5b1;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
+    padding: 25px 0;
+    font-size: 0.85rem;
+    border-top: 1px solid #34495e;
 }
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
     nav ul li {
-        margin: 0 10px;
+        margin: 0 12px;
+    }
+    .hero {
+        height: auto;
+        padding: 120px 0 60px 0;
     }
     .hero-content h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
